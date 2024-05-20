@@ -1,0 +1,94 @@
+.header-bg {
+  background-color: rgba(0, 0, 0, 0.6); /* Black with transparency */
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+.new-header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  position: relative;
+  left: -20px; /* Adjust the value as needed to move the title slightly to the left */
+  font-size: 1rem;
+  font-weight: bold;
+  color: white; /* White text */
+}
+
+.header-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.contact-item span {
+  margin-left: 5px;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.profile-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.profile-text {
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.profile-icon {
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+.new-nav {
+  position: absolute;
+  top: 38px;
+  left: 700px;
+  background-color: transparent;
+}
+
+.btn-home {
+  position: relative;
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 153px; /* Adjusted width for better fit */
+  height: 83px; /* Adjusted height for better fit */
+  background-size: cover;
+  color: white;
+  text-decoration: none;
+  overflow: hidden; /* Ensures text doesn't go out of the frame */
+}
+
+.btn-home .btn-text {
+  font-size: 1rem; /* Larger text size */
+  white-space: nowrap; /* Prevents text from wrapping to a new line */
+  line-height: 1; /* Ensures proper line height */
+  display: inline-block; /* Ensures the text block respects flex centering */
+  text-align: center; /* Center text horizontally */
+}

@@ -1,0 +1,445 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: url('/background.avif') no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif; /* Use a clean, modern font */
+  backdrop-filter: blur(8px); /* Add blur effect */
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+}
+
+
+body {
+  margin: 0;
+  background: none; /* Remove background from body */
+}
+
+#root {
+  flex: 1; /* Ensure #root takes up remaining height */
+}
+
+.new-header {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('./headerBackground.avif') no-repeat center center/cover;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white; /* White text */
+  text-align: center;
+}
+
+.new-footer {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('./footer.avif') no-repeat center center/cover;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white; /* White text */
+  text-align: center;
+}
+
+.footer-bg {
+  background-color: rgba(0, 0, 0, 0.6); /* Black with transparency */
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+.new-footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-title {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white; /* White text */
+}
+
+.footer-icon {
+  margin-right: 10px;
+  color: #FFD700; /* Golden icon */
+}
+
+
+.contact-info {
+  text-align: right;
+  font-size: 1rem;
+  color: white; /* White text */
+}
+
+.contact-info div {
+  margin-bottom: 2px;
+}
+
+.app-container {
+  position: relative;
+  min-height: 100vh;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.85); /* Black with transparency */
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.app-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/background.avif'); /* Ensure this path is correct */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  filter: blur(8px); /* Add blur effect */
+}
+
+.custom-header {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6); /* Black with transparency */
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 2rem;
+  font-weight: bold;
+  color: white; /* White text */
+  text-align: center;
+}
+
+.neww-container {
+  position: relative;
+  padding: 10px;
+  border-radius: 20px; /* More rounded corners */
+  margin: 20px auto;
+  max-width: 600px; /* Adjust the maximum width as needed */
+  overflow: hidden; /* Ensure the blur doesn't overflow */
+}
+
+.neww-container::before {
+  content: '';
+  position: absolute;
+  top: -10px; /* Adjust as needed */
+  left: -10px; /* Adjust as needed */
+  right: -10px; /* Adjust as needed */
+  bottom: -10px; /* Adjust as needed */
+  background-image: url('https://t3.ftcdn.net/jpg/01/34/53/74/360_F_134537443_VendrqyXIWyHrZgxdIsfyKUost734JDP.jpg'); /* Replace with your background photo path */
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px); /* Adjust the blur amount as needed */
+  z-index: -1;
+}
+
+.neww-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Black with transparency */
+  border-radius: 20px; /* Same border radius as the container */
+  z-index: -1;
+}
+
+
+.custom-header {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.btn-custom {
+  width: 100%;
+  max-width: 400px; /* Adjust button maximum width as needed */
+  height: 200px; /* Adjust button height as needed */
+  background-size: cover;
+  background-position: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.btn-text {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.btn-custom:hover {
+  transform: scale(1.05);
+}
+
+.footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.footer div {
+  cursor: pointer;
+}
+
+.footer div:hover {
+  text-decoration: underline;
+}
+
+.custom-header-bar {
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6); /* Black with transparency */
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  padding-top: 1px; /* Add padding to move buttons higher */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+  position: relative;
+}
+
+.contact-info {
+  text-align: right;
+  font-size: 0.9rem;
+  color: white; /* White text */
+  font-weight: bold;
+}
+
+.contact-info div {
+  margin-bottom: 2px;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background color with transparency */
+  color: white; /* White text */
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 10px;
+  box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-footer {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark background color with transparency */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white; /* White text */
+  border-radius: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: white; /* White text */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #ddd; /* Lighter color on hover */
+}
+
+.custom-nav {
+  position: absolute;
+  top: 23px;
+  left: 820px;
+  background-color: transparent;
+}
+
+.btn-custom, .btn-home {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 200px; /* Adjust width as needed */
+  height: 200px; /* Adjust height as needed */
+  border: 2px solid black; /* Black bezel */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.btn-home {
+  width: 100px; /* Smaller width for home button */
+  height: 100px; /* Smaller height for home button */
+  margin-bottom: 20px; /* Add space between home button and other buttons */
+}
+
+.btn-custom:hover, .btn-home:hover {
+  background-color: rgba(0, 0, 0, 0.6); /* Darken the background on hover */
+  transform: translateY(-3px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-custom:active, .btn-home:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-text {
+  position: absolute;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  opacity: 0; /* Hide text by default */
+  transition: opacity 0.3s;
+}
+
+.btn-custom:hover .btn-text, .btn-home:hover .btn-text {
+  opacity: 1; /* Show text on hover */
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* New CSS class for blur effect */
+.blur-section {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  backdrop-filter: blur(5px); /* Blur effect */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+/* Custom table styling */
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+  border-radius: 10px;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.custom-table th, .custom-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.custom-table th {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: black;
+  font-weight: bold;
+}
+
+.custom-table tr:nth-of-type(even) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.custom-table tr:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* MemoryComponent.css */
+.btn-action {
+  background-color: #ff4c4c; /* Cherry-red color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-action:hover {
+  background-color: #ff1a1a; /* Darker red on hover */
+}
+
+.btn-success {
+  background-color: #28a745; /* Green color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #218838; /* Darker green on hover */
+}

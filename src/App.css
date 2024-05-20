@@ -1,0 +1,177 @@
+html, body, #root, .app-container {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-image: url('/background.avif'); /* Ensure this path is correct */
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif; /* Use a clean, modern font */
+  backdrop-filter: blur(8px); /* Add blur effect */
+}
+
+.app-container {
+ display: flex;
+ flex-direction: column;
+ min-height: 100vh;
+ background-color: rgba(0, 0, 0, 0.95); /* Black with transparency */
+ backdrop-filter: blur(10px);
+ border-radius: 20px;
+ box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+ padding: 20px;
+}
+
+.custom-header {
+ position: relative;
+ width: 100%;
+ padding: 20px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ background-color: rgba(0, 0, 0, 0.6); /* Black with transparency */
+ backdrop-filter: blur(10px);
+ border-radius: 20px;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ font-size: 1.8rem;
+ font-weight: bold;
+ color: white; /* White text */
+ text-align: center;
+}
+
+.custom-header-bar {
+ position: relative;
+ width: 100%;
+ padding: 20px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: rgba(0, 0, 0, 0.6); /* Black with transparency */
+ backdrop-filter: blur(10px);
+ border-radius: 20px;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ margin-bottom: 20px;
+}
+
+.header-content {
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.header-title {
+ display: flex;
+ align-items: center;
+ font-size: 1.5rem;
+ font-weight: bold;
+ color: white; /* White text */
+}
+
+.header-icon {
+ margin-right: 10px;
+ color: #4CAF50;
+}
+
+.contact-info {
+ text-align: right;
+ font-size: 0.9rem;
+ color: white; /* White text */
+ font-weight: bold;
+}
+
+.contact-info div {
+ margin-bottom: 2px;
+}
+
+.content {
+ flex: 1;
+ padding: 20px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+}
+
+.footer {
+ background-color: rgba(0, 0, 0, 0.8); /* Dark background color with transparency */
+ color: white; /* White text */
+ text-align: center;
+ height: 50px;
+ line-height: 50px;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ padding: 0 20px;
+ border-radius: 10px;
+ box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-footer {
+ background-color: rgba(0, 0, 0, 0.6); /* Dark background color with transparency */
+ backdrop-filter: blur(10px); /* Blur effect */
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ padding: 15px 20px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ color: white; /* White text */
+ border-radius: 20px;
+}
+
+.footer-content {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ width: 100%;
+}
+
+.footer-links {
+ display: flex;
+ gap: 20px;
+}
+
+.footer-links a {
+ color: white; /* White text */
+ text-decoration: none;
+ font-weight: bold;
+ transition: color 0.3s;
+}
+
+.footer-links a:hover {
+ color: #ddd; /* Lighter color on hover */
+}
+
+.custom-nav {
+ position: absolute;
+ top: 98px;
+ left: 20px;
+ background-color: transparent;
+}
+
+.btn-custom {
+ background-color: rgba(76, 175, 80, 0.8);
+ border: 2px solid black;
+ color: white;
+ padding: 15px 30px;
+ text-align: center;
+ text-decoration: none;
+ display: inline-block;
+ font-size: 16px;
+ font-weight: bold;
+ margin: 10px;
+ transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+ border-radius: 15px;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-custom:hover {
+ background-color: rgba(69, 160, 73, 0.8);
+ transform: translateY(-3px);
+ box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-custom:active {
+ background-color: rgba(56, 142, 60, 0.8);
+ transform: translateY(0);
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
