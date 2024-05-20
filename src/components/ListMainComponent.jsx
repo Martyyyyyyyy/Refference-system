@@ -60,7 +60,7 @@ const ListMainComponent = () => {
                       <td>{component.type}</td>
                       <td>{component.inventory_number}</td>
                       <td>{component.manufacturer}</td>
-                      <td>{component.single}</td>
+                      <td>{component.free}</td>
                       <td>
                         <button className='btn btn-info' 
                         onClick={() => updateComponent(component.id)}>Оновити компоненту</button>

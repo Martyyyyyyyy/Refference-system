@@ -7,14 +7,14 @@ const MainComponent = () => {
   const [type, setType] = useState('');
   const [inventory_number, setInventoryNumber] = useState('');
   const [manufacturer, setManufacturer] = useState('');
-  const [single, setSingle] = useState('');
+  const [free, setFree] = useState(''); // Adjusted to handle null state
   const navigate = useNavigate();
   const { id } = useParams();
   const [errors, setErrors] = useState({
     type: '',
     inventory_number: '',
     manufacturer: '',
-    single: ''
+    free: ''
   });
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const MainComponent = () => {
         setType(response.data.type);
         setInventoryNumber(response.data.inventory_number);
         setManufacturer(response.data.manufacturer);
-        setSingle(response.data.single);
+        setFree(response.data.free === 'так' ? true : response.data.free === 'ні' ? false : '');
       }).catch(error => {
         console.error(error);
       });
@@ -42,15 +42,15 @@ const MainComponent = () => {
     setManufacturer(e.target.value);
   }
 
-  function handleSingle(e) {
-    setSingle(e.target.value);
+  function handleFree(e) {
+    setFree(e.target.value === 'так' ? true : e.target.value === 'ні' ? false : '');
   }
 
   function saveOrUpdateComponent(e) {
     e.preventDefault();
 
     if (validateForm()) {
-      const component = { type, inventory_number, manufacturer, single };
+      const component = { type, inventory_number, manufacturer, free: free === true ? 'так' : free === false ? 'ні' : '' };
       console.log(component);
 
       if (id) {
@@ -71,7 +71,7 @@ const MainComponent = () => {
     }
   }
 
-function goBack(e) {
+  function goBack(e) {
     e.preventDefault();
     navigate('/components');
   }
@@ -101,10 +101,10 @@ function goBack(e) {
       valid = false;
     }
 
-    if (single.trim()) {
-      errorsCopy.single = '';
+    if (free !== '') {
+      errorsCopy.free = '';
     } else {
-      errorsCopy.single = "Поле є обов'язковим";
+      errorsCopy.free = "Поле є обов'язковим";
       valid = false;
     }
 
@@ -162,15 +162,17 @@ function goBack(e) {
         </div>
         <div className='form-group'>
           <label className='form-label'>Вільний:</label>
-          <input
-            type='text'
-            placeholder='Введіть так або ні'
-            name='single'
-            value={single}
-            className={`form-control ${errors.single ? 'is-invalid' : ''}`}
-            onChange={handleSingle}
-          />
-          {errors.single && <div className='invalid-feedback'> {errors.single} </div>}
+          <select
+            name='free'
+            value={free === true ? 'так' : free === false ? 'ні' : ''}
+            className={`form-control ${errors.free ? 'is-invalid' : ''}`}
+            onChange={handleFree}
+          >
+            <option value=''>Виберіть</option>
+            <option value='так'>так</option>
+            <option value='ні'>ні</option>
+          </select>
+          {errors.free && <div className='invalid-feedback'> {errors.free} </div>}
         </div>
         <button type='submit' className='btn-submit'>Підтвердити</button>
         <br/><br/>
